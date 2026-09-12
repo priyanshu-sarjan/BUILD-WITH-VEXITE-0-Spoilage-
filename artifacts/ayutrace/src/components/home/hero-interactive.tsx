@@ -15,7 +15,8 @@ import {
   Activity,
   ChevronRight,
   Copy,
-  Check
+  Check,
+  Sprout
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -102,7 +103,6 @@ export function HeroInteractiveSection() {
     if (SAMPLE_BATCHES[query]) {
       setSelectedBatch(SAMPLE_BATCHES[query]);
     } else if (query) {
-      // Default fallback mock batch for any user input
       setSelectedBatch({
         id: query,
         name: `Perishable Agri Batch (${query}) 🌾`,
@@ -132,71 +132,71 @@ export function HeroInteractiveSection() {
   };
 
   return (
-    <section className="relative pt-8 pb-12 px-4 max-w-7xl mx-auto space-y-10 overflow-hidden">
-      {/* Background Decorative Ambient Glowing Orbs */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section className="relative pt-6 pb-12 px-4 max-w-7xl mx-auto space-y-10 overflow-hidden">
+      {/* Background Decorative Glowing Orbs */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
-      {/* Main Hero Header Header */}
+      {/* Main FarmersWorld Hero Header */}
       <div className="text-center space-y-5 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md animate-pulse">
-          <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-          <span>Next-Gen Zero Spoilage Agri-Tech Platform</span>
+        <div className="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md animate-pulse">
+          <Sprout className="w-3.5 h-3.5 text-emerald-400" />
+          <span>FarmersWorld Smart Agriculture & 0-Spoilage System</span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight leading-[1.15] text-foreground">
-          Pioneering <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Zero Food Waste</span> across Farm, Mandi & Retail
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-foreground font-sans">
+          Smart Agriculture Meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Multimodal Gemini AI</span>
         </h1>
 
         <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          AyuTrace Agri-Fresh integrates <span className="text-foreground font-medium">IoT Cold-Chain Telemetry</span>, <span className="text-foreground font-medium">GIS Geo-Tagging</span>, <span className="text-foreground font-medium">Computer Vision Quality Scoring</span>, and <span className="text-foreground font-medium">Dynamic Rescue Pricing</span>.
+          Empowering Indian farmers and eliminating post-harvest food waste with <span className="text-foreground font-semibold">Gemini Computer Vision</span>, <span className="text-foreground font-semibold">Vernacular Voice Assistant</span>, and <span className="text-foreground font-semibold">Dynamic 0-Spoilage Pricing</span>.
         </p>
 
         {/* CTA Button Bar */}
         <div className="flex flex-wrap justify-center items-center gap-3 pt-2">
           <Button
             size="lg"
-            onClick={() => setLocation("/map")}
-            className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-6 py-6 rounded-2xl shadow-xl shadow-emerald-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
+            onClick={() => setLocation("/vision-grading")}
+            className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-6 rounded-2xl shadow-xl shadow-emerald-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
           >
-            <MapPin className="w-4 h-4" /> Live GIS Hubs & Map
+            <Sparkles className="w-4 h-4 text-amber-300" /> Try Gemini Vision Inspector
           </Button>
 
           <Button
             size="lg"
             variant="outline"
-            onClick={() => setLocation("/products")}
-            className="border-amber-500/40 text-amber-300 hover:bg-amber-500/10 font-semibold text-sm px-6 py-6 rounded-2xl backdrop-blur-md hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
+            onClick={() => setLocation("/voice-inventory")}
+            className="border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/10 font-bold text-xs sm:text-sm px-6 py-6 rounded-2xl backdrop-blur-md hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
           >
-            <Flame className="w-4 h-4 text-amber-400 animate-bounce" /> Dynamic Rescue Deals
+            🎙️ Farmer Voice Assistant
           </Button>
 
           <Button
             size="lg"
             variant="secondary"
             onClick={() => setSelectedBatch(SAMPLE_BATCHES["BATCH-TOMATO-882"])}
-            className="bg-card hover:bg-card/80 border border-border text-foreground font-semibold text-sm px-6 py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
+            className="bg-card hover:bg-card/80 border border-emerald-500/20 text-foreground font-semibold text-xs sm:text-sm px-6 py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
           >
-            <QrCode className="w-4 h-4 text-emerald-400" /> Interactive Batch Demo
+            <QrCode className="w-4 h-4 text-emerald-400" /> Demo Batch Tracker
           </Button>
         </div>
       </div>
 
-      {/* Interactive Quick Trace Search Bar Card */}
+      {/* FarmersWorld Batch Tracer Input Card */}
       <Card className="max-w-3xl mx-auto border border-emerald-500/30 bg-card/80 backdrop-blur-xl shadow-2xl rounded-3xl p-6 glow-emerald transition-all">
         <CardContent className="p-0 space-y-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2.5 rounded-2xl bg-emerald-500/20 text-emerald-400 shadow-inner">
                 <Search className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-base font-bold font-serif text-foreground">Interactive Farm-to-Fork Batch Tracer</h3>
+                <h3 className="text-base font-bold text-foreground">FarmersWorld Batch & IoT Tracer</h3>
                 <p className="text-xs text-muted-foreground">Enter any Batch ID or click a sample below to inspect real-time cold chain telemetry</p>
               </div>
             </div>
-            <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/40 text-[11px] hidden sm:flex items-center gap-1">
-              <Activity className="w-3 h-3 animate-pulse" /> Live Telemetry
+            <Badge className="bg-emerald-500/20 text-emerald-300 border-emerald-500/40 text-[11px] hidden sm:flex items-center gap-1">
+              <Activity className="w-3 h-3 animate-pulse" /> Telemetry Active
             </Badge>
           </div>
 
@@ -224,7 +224,7 @@ export function HeroInteractiveSection() {
                   setSearchQuery(batch.id);
                   setSelectedBatch(batch);
                 }}
-                className="text-xs px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/40 text-emerald-300 hover:bg-emerald-900/60 hover:border-emerald-500/60 transition-all flex items-center gap-1.5 cursor-pointer"
+                className="text-xs px-3 py-1.5 rounded-xl bg-emerald-950/40 border border-emerald-800/40 text-emerald-300 hover:bg-emerald-900/60 hover:border-emerald-500/60 transition-all flex items-center gap-1.5 cursor-pointer"
               >
                 <span>{batch.id}</span>
                 <span className="text-[10px] text-emerald-400/80">({batch.name.split(" ")[1]})</span>
@@ -236,21 +236,21 @@ export function HeroInteractiveSection() {
 
       {/* Live Interactive Telemetry Metrics Row */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-        <div className="bg-card/70 border border-border/80 rounded-2xl p-4 text-center space-y-1 hover:border-emerald-500/40 transition-all">
+        <div className="bg-card/80 border border-emerald-500/20 rounded-2xl p-4 text-center space-y-1 hover:border-emerald-500/40 transition-all shadow-md">
           <div className="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-400">48,290+ kg</div>
           <div className="text-xs text-muted-foreground font-medium">Food Spoilage Rescued</div>
         </div>
-        <div className="bg-card/70 border border-border/80 rounded-2xl p-4 text-center space-y-1 hover:border-amber-500/40 transition-all">
+        <div className="bg-card/80 border border-emerald-500/20 rounded-2xl p-4 text-center space-y-1 hover:border-amber-500/40 transition-all shadow-md">
           <div className="text-2xl sm:text-3xl font-extrabold font-mono text-amber-400">142 Hubs</div>
           <div className="text-xs text-muted-foreground font-medium">IoT Cold Storage Active</div>
         </div>
-        <div className="bg-card/70 border border-border/80 rounded-2xl p-4 text-center space-y-1 hover:border-teal-500/40 transition-all">
+        <div className="bg-card/80 border border-emerald-500/20 rounded-2xl p-4 text-center space-y-1 hover:border-teal-500/40 transition-all shadow-md">
           <div className="text-2xl sm:text-3xl font-extrabold font-mono text-teal-400">99.4%</div>
           <div className="text-xs text-muted-foreground font-medium">Cold-Chain Uptime</div>
         </div>
-        <div className="bg-card/70 border border-border/80 rounded-2xl p-4 text-center space-y-1 hover:border-emerald-500/40 transition-all">
+        <div className="bg-card/80 border border-emerald-500/20 rounded-2xl p-4 text-center space-y-1 hover:border-emerald-500/40 transition-all shadow-md">
           <div className="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-300">12,450+</div>
-          <div className="text-xs text-muted-foreground font-medium">AI Computer Vision Scans</div>
+          <div className="text-xs text-muted-foreground font-medium">Gemini AI Scans</div>
         </div>
       </div>
 
@@ -260,28 +260,28 @@ export function HeroInteractiveSection() {
           <DialogContent className="max-w-xl bg-card border-emerald-500/40 text-foreground rounded-3xl p-6 space-y-5">
             <DialogHeader className="space-y-1 text-left">
               <div className="flex items-center justify-between">
-                <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/40 text-xs">
+                <Badge className="bg-emerald-500/20 text-emerald-300 border-emerald-500/40 text-xs">
                   {selectedBatch.id}
                 </Badge>
                 <span className="text-xs font-mono text-muted-foreground flex items-center gap-1">
                   <Activity className="w-3.5 h-3.5 text-emerald-400 animate-pulse" /> {selectedBatch.status}
                 </span>
               </div>
-              <DialogTitle className="text-xl font-bold font-serif">{selectedBatch.name}</DialogTitle>
+              <DialogTitle className="text-xl font-bold">{selectedBatch.name}</DialogTitle>
               <p className="text-xs text-muted-foreground">{selectedBatch.location}</p>
             </DialogHeader>
 
             {/* Metrics Breakdown Grid */}
-            <div className="grid grid-cols-3 gap-3 bg-background/80 p-3.5 rounded-2xl border border-border/60 text-center">
+            <div className="grid grid-cols-3 gap-3 bg-background/80 p-3.5 rounded-2xl border border-emerald-500/20 text-center">
               <div>
                 <span className="text-[11px] text-muted-foreground block">Cold Temp</span>
-                <span className="text-sm font-bold text-emerald-400 flex items-center justify-center gap-1 mt-0.5">
+                <span className="text-sm font-bold text-emerald-400 flex items-center justify-center gap-1 mt-0.5 font-mono">
                   <Thermometer className="w-3.5 h-3.5" /> {selectedBatch.temp}
                 </span>
               </div>
               <div>
                 <span className="text-[11px] text-muted-foreground block">Freshness Score</span>
-                <span className="text-sm font-bold text-amber-400 mt-0.5 block">{selectedBatch.freshness}%</span>
+                <span className="text-sm font-bold text-amber-400 mt-0.5 block font-mono">{selectedBatch.freshness}%</span>
               </div>
               <div>
                 <span className="text-[11px] text-muted-foreground block">Quality Grade</span>
@@ -291,7 +291,7 @@ export function HeroInteractiveSection() {
 
             {/* Step Timeline */}
             <div className="space-y-3 pt-1">
-              <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Farm-to-Fork Live Timeline</h4>
+              <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">FarmersWorld Telemetry Timeline</h4>
               <div className="space-y-2.5 pl-2 border-l-2 border-emerald-500/30">
                 {selectedBatch.steps.map((step, idx) => (
                   <div key={idx} className="relative pl-4">
