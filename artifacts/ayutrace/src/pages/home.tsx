@@ -1,4 +1,5 @@
 import { HeroInteractiveSection } from "@/components/home/hero-interactive";
+import { GeminiFeaturesShowcase } from "@/components/home/gemini-features-showcase";
 import { LiveOrderTicker } from "@/components/home/live-order-ticker";
 import { ColdChainSimulator } from "@/components/home/cold-chain-simulator";
 import { InteractiveHubTabs } from "@/components/home/interactive-hub-tabs";
@@ -12,32 +13,37 @@ export default function Home() {
       {/* 1. Hero Section with Batch Tracer & Animated Metrics */}
       <HeroInteractiveSection />
 
+      {/* 2. 5 High-Impact Gemini Multimodal Features Showcase */}
+      <section className="max-w-7xl mx-auto px-4">
+        <GeminiFeaturesShowcase />
+      </section>
+
       {/* Live Activity & Telemetry Ticker */}
       <section className="max-w-7xl mx-auto px-4">
         <LiveOrderTicker />
       </section>
 
-      {/* 2. Interactive IoT Cold-Chain & Spoilage Simulator */}
+      {/* 3. Interactive IoT Cold-Chain & Spoilage Simulator */}
       <section className="max-w-7xl mx-auto px-4">
         <ColdChainSimulator />
       </section>
 
-      {/* 3. Interactive Regional Grid & Mandi Intelligence Tabs */}
+      {/* 4. Interactive Regional Grid & Mandi Intelligence Tabs */}
       <section className="max-w-7xl mx-auto px-4">
         <InteractiveHubTabs />
       </section>
 
-      {/* 4. Zero Food Waste: Dynamic Flash Discount Deals */}
+      {/* 5. Zero Food Waste: Dynamic Flash Discount Deals */}
       <section className="max-w-7xl mx-auto px-4">
         <DynamicDiscountBanner />
       </section>
 
-      {/* 5. AI Computer Vision Spoilage Diagnostic Scanner Showcase */}
+      {/* 6. AI Computer Vision Spoilage Diagnostic Scanner Showcase */}
       <section className="max-w-7xl mx-auto px-4">
         <VisionSpoilageScanner />
       </section>
 
-      {/* 6. Kisan-Grahak Interactive Community Voting Poll */}
+      {/* 7. Kisan-Grahak Interactive Community Voting Poll */}
       <section className="max-w-7xl mx-auto px-4">
         <CommunityPollPreview />
       </section>
