@@ -20,6 +20,13 @@ import DashboardPage from "@/pages/dashboard";
 import OrdersPage from "@/pages/orders";
 import TracePage from "@/pages/trace";
 
+// New Gemini Multimodal Feature Pages for AgriFresh
+import VisionGradingPage from "@/pages/vision-grading";
+import VoiceInventoryPage from "@/pages/voice-inventory";
+import DynamicPricingPage from "@/pages/dynamic-pricing";
+import TraceabilityPage from "@/pages/traceability";
+import CropHealthPage from "@/pages/crop-health";
+
 import { AIAgentPopup } from "@/components/chatbot/ai-agent-popup";
 
 const queryClient = new QueryClient({
@@ -86,6 +93,14 @@ function Router() {
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
+          {/* Gemini Multimodal Routes */}
+          <Route path="/vision-grading" component={VisionGradingPage} />
+          <Route path="/voice-inventory" component={VoiceInventoryPage} />
+          <Route path="/dynamic-pricing" component={DynamicPricingPage} />
+          <Route path="/traceability" component={TraceabilityPage} />
+          <Route path="/crop-health" component={CropHealthPage} />
+
+          {/* Standard Routes */}
           <Route path="/map" component={MapPage} />
           <Route path="/herbs" component={HerbsPage} />
           <Route path="/herbs/:id" component={HerbDetail} />
